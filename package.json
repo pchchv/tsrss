@@ -1,4 +1,9 @@
 {
   "name": "tsrss",
-  "packageManager": "yarn@4.4.1"
+  "description": "A simple RSS reader.",
+  "main": "dist/index.js",
+  "repository": "git@github.com:pchchv/tsrss.git",
+  "author": "Evgenii Pochechuev <ipchchv@gmail.com>",
+  "packageManager": "yarn@4.4.1",
+  "license": "Apache-2.0"
 }
