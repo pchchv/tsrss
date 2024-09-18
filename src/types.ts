@@ -32,3 +32,9 @@ export interface FeedCategory {
     name: string,
     colour: string
 }
+
+export interface FeedlyQueryResponse {
+    hint: string,
+    related: string[],
+    results: FeedlyProvider[]
+}
