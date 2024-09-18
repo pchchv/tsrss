@@ -42,3 +42,13 @@ export interface FeedlyQueryResponse {
     related: string[],
     results: FeedlyProvider[]
 }
+
+export interface Article {
+    authors?: string[] | string,
+    title?: string,
+    description?: string,
+    link?: string,
+    published?: string,
+    image?: string | undefined,
+    publisherImage?: string
+}
