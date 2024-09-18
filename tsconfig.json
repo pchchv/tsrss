@@ -24,13 +24,13 @@
         "removeComments": true,
         "isolatedModules": true,
         "esModuleInterop": true,
-        "moduleResolution": "node",
         "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
         "noFallthroughCasesInSwitch": true,
         "allowSyntheticDefaultImports": true,
-        "forceConsistentCasingInFileNames": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true
+        "forceConsistentCasingInFileNames": true
     },
     "include": [
         "src/**/*"
