@@ -1,3 +1,7 @@
+export type ReadingMode = "card" | "title-only"
+
+export type SortMode = "asc" | "desc"
+
 export interface FeedlyProvider {
     feedId: string,
     subscribers: number,
