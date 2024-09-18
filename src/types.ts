@@ -21,3 +21,14 @@ export interface FeedlyProvider {
     deliciousTags?: string[],
     topics?: string[],
 }
+
+export interface Feed {
+    id: string,
+    title: string,
+    feedProviders: FeedlyProvider[]
+}
+
+export interface FeedCategory {
+    name: string,
+    colour: string
+}
