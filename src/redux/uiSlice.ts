@@ -5,3 +5,8 @@ interface SideContainerViewProp {
     viewName: SideContainerViewType
     params?: { id: string }
 }
+
+interface InitialReduxState{
+    darkMode: boolean,
+    sideViewType: SideContainerViewProp
+}
