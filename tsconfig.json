@@ -14,6 +14,7 @@
         "noEmit": true,
         "allowJs": true,
         "outDir": "dist",
+        "rootDir": "src",
         "baseUrl": "src",
         "sourceMap": true,
         "module": "esnext",
@@ -21,16 +22,21 @@
         "incremental": true,
         "skipLibCheck": true,
         "declaration": false,
+        "importHelpers": true,
+        "alwaysStrict": false,
         "removeComments": true,
         "isolatedModules": true,
         "esModuleInterop": true,
+        "strictNullChecks": false,
         "resolveJsonModule": true,
         "moduleResolution": "node",
+        "noImplicitReturns": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "noFallthroughCasesInSwitch": true,
         "allowSyntheticDefaultImports": true,
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+
     },
     "include": [
         "src/**/*"
