@@ -1,4 +1,5 @@
 import { Article } from "@/types";
+import Parser from "rss-parser";
 import {parseStringPromise} from "xml2js";
 
 function applyFilter(filter: string, articles: Article[]){
@@ -63,4 +64,59 @@ export default async function parseXML(xml: any) {
     });
   }).catch((err) => {});
   return result
+}
+
+// Ensure to use a cors extensoin if running in dev mode.
+export async function parse2(xmlObjects: string[], providerNames: string[], filter?: "today"){
+  let parser = new Parser({
+    customFields: {
+      item: ['image']
+    }
+  });
+
+  // return object
+  let articles: Article[] = []
+  for (let i = 0; i < xmlObjects.length; i++) {
+    let xml = xmlObjects[i]
+    try {
+      const result = await parser.parseString(xml)
+      let items = result.items
+      for (let j = 0; j < items.length; j++) {
+        let item = items[j]
+        articles.push({
+          title: item.title,
+          authors: item.creator ? item.creator : providerNames[i],
+          description: item.content,
+          link: item.link,
+          published: item.pubDate,
+          image: item.image,
+          publisherImage: result.image?.url
+        });
+      }
+    } catch (e) {}
+  }
+  
+  // sort them by pubDate (millis)
+  articles.sort((a, b) => {
+    if (a.published && b.published) {
+      let dateA = new Date(a.published)
+      let dateB = new Date(b.published)
+      return dateB.getTime() - dateA.getTime()
+    }
+    return 0
+  });
+  
+  // apply filter
+  if (filter) {
+    articles = applyFilter(filter, articles)
+  }
+  
+  // convert time into human-readable format
+  articles = articles.map((article) => (
+    {
+      ...article,
+      published: formatDate(article.published!)
+    }
+  ));
+  return articles
 }
