@@ -1,4 +1,5 @@
 import axios from "axios";
+import { FeedlyQueryResponse } from "@/types";
 
 const BASE_URL = "http://cloud.feedly.com/v3/"
 
@@ -17,11 +18,33 @@ export async function request(url: string, content: Object = {}){
                   console.log(error.response.headers);
                 }
                 else if (error.request){
-                  //Request made but no response
+                  // request made but no response
                   console.log(error.request)
                 }
                 else {
-                  //Non API-related error
+                  // non API-related error
+                  console.log(error.message)
+                }
+              })
+}
+
+
+export default async function query(queryString: string, count: number = 5): Promise<FeedlyQueryResponse>{
+  const query = `${BASE_URL}search/feeds?query=${queryString}&count=${count}`
+  return await axios.get(query)
+              .then((r) => r.data)
+              .catch((error) => {
+                if (error.response){
+                  console.log(error.response.data)
+                  console.log(error.response.status);
+                  console.log(error.response.headers);
+                }
+                else if (error.request){
+                  // request made but no response
+                  console.log(error.request)
+                }
+                else {
+                  // non API-related error
                   console.log(error.message)
                 }
               })
