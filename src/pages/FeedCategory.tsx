@@ -1,0 +1,3 @@
+interface FeedCategoryParams {
+    category: string
+}
