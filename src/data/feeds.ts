@@ -1,6 +1,6 @@
 // A basic categorise list is created here.
 // Users can add additional lists, which will be saved locally and can be categorized.
-import { FeedlyProvider } from "../types";
+import { FeedlyProvider } from "@/types";
 
 // Require root url for favicon
 const FEEDS: FeedlyProvider[] = [

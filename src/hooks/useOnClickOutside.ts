@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 
 export default function useOnClickOutside( ref: React.RefObject<HTMLDivElement>, condition?: boolean, onClickOutside?: () => void, onClickInside?: () => void ) {
   useEffect(() => {

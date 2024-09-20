@@ -1,5 +1,5 @@
-import Image from "./Image";
-import { FeedlyProvider } from "../types";
+import Image from "@/components/Image";
+import { FeedlyProvider } from "@/types";
 import { NavLink } from "react-router-dom";
 
 interface DropdownChildProps {

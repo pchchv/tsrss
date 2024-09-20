@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { saveState, loadState } from "./localStorage";
-import feedReducer from "./feedSlice";
-import uiReducer from "./uiSlice";
+import { saveState, loadState } from "@/redux/localStorage";
+import feedReducer from "@/redux/feedSlice";
+import uiReducer from "@/redux/uiSlice";
 
 const persistedState = loadState();
 

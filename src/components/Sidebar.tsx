@@ -1,11 +1,11 @@
-import Switch from "./Switch";
 import { useRef } from "react";
-import Dropdown from "./Dropdown";
 import { NavLink } from "react-router-dom";
-import { showView } from "../redux/uiSlice";
-import { toggleDarkMode } from "../redux/uiSlice";
-import useOnClickOutside from "../hooks/useOnClickOutside";
-import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import Switch from "@/components/Switch";
+import { showView } from "@/redux/uiSlice";
+import Dropdown from "@/components/Dropdown";
+import { toggleDarkMode } from "@/redux/uiSlice";
+import useOnClickOutside from "@/hooks/useOnClickOutside";
+import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 
 interface SidebarProps {
   visible: boolean

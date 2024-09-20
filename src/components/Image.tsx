@@ -1,4 +1,4 @@
-import { CSSProperties, useState } from 'react'
+import { CSSProperties, useState } from "react";
 
 interface ImageProps {
   className: string,

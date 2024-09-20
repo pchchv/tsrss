@@ -1,7 +1,7 @@
-import FEEDS from "../data/feeds";
 import { v4 as uuidv4 } from "uuid";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Feed, ReadingMode, SortMode, FeedlyProvider } from "../types";
+import { Feed, ReadingMode, SortMode, FeedlyProvider } from "@/types";
+import FEEDS from "@/data/feeds";
 
 export interface FeedState {
   feed: Feed[];

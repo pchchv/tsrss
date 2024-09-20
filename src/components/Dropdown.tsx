@@ -1,7 +1,7 @@
-import { Feed } from "../types"
-import { useState } from "react"
-import { NavLink } from "react-router-dom"
-import DropdownChild from "./DropdownChild"
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { Feed } from "@/types";
+import DropdownChild from "@/components/DropdownChild";
 
 interface DropdownProps {
   feed: Feed
