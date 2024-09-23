@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Layout from "@/components/Layout";
 import { useAppSelector } from "@/redux/hooks";
 
 function App() {
@@ -14,6 +15,12 @@ function App() {
       document.body.classList.remove("bg-darkbackground");
     }
   }, [darkMode]);
+
+  return (
+        <div className={darkMode ? "dark" : "light" }>
+          <Layout/>
+        </div>
+  );
 }
 
 export default App;
