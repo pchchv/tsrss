@@ -1,25 +1,30 @@
 import { CSSProperties, useState } from "react";
 
 interface ImageProps {
-  className: string,
-  src: string | undefined,
-  FallbackComponent: () => JSX.Element
-  style?: CSSProperties
+  className: string;
+  src: string | undefined;
+  FallbackComponent: () => JSX.Element;
+  style?: CSSProperties;
 }
 
-export default function Image({ className, src, FallbackComponent, style }: ImageProps) { 
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
+export default function Image({
+  className,
+  src,
+  FallbackComponent,
+  style,
+}: ImageProps) {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   // if src is undefined return fallback
   if (!src) {
-    return <FallbackComponent/>
+    return <FallbackComponent />;
   }
-  
+
   return (
     <>
-      { (loading || error) && <FallbackComponent/> }
+      {(loading || error) && <FallbackComponent />}
       <img
-        className={className + ( (loading || error) && " hidden")}
+        className={className + ((loading || error) && " hidden")}
         style={style}
         src={src}
         alt=""
@@ -27,5 +32,5 @@ export default function Image({ className, src, FallbackComponent, style }: Imag
         onLoad={() => setLoading(false)}
       />
     </>
-  )
+  );
 }

@@ -17,9 +17,9 @@ function App() {
   }, [darkMode]);
 
   return (
-        <div className={darkMode ? "dark" : "light" }>
-          <Layout/>
-        </div>
+    <div className={darkMode ? "dark" : "light"}>
+      <Layout />
+    </div>
   );
 }
 
