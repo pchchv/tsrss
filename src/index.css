@@ -3,31 +3,31 @@
 @tailwind utilities;
 
 @layer components {
-  .primary-text{
-    @apply text-black dark:text-white
+  .primary-text {
+    @apply text-black dark:text-white;
   }
-  .secondary-text{
-    @apply text-gray-500 dark:text-gray-300
+  .secondary-text {
+    @apply text-gray-500 dark:text-gray-300;
   }
-  .title{
-    @apply font-bold text-5xl sm:text-7xl mb-6
+  .title {
+    @apply font-bold text-5xl sm:text-7xl mb-6;
   }
-  .follow-btn{
-    @apply border sm:px-4 py-2 text-gray-500 text-xs font-semibold  rounded-full transition duration-200 ease-in-out hover:bg-accent hover:text-white dark:border-gray-600
+  .follow-btn {
+    @apply border sm:px-4 py-2 text-gray-500 text-xs font-semibold  rounded-full transition duration-200 ease-in-out hover:bg-accent hover:text-white dark:border-gray-600;
   }
-  .following-btn{
-    @apply bg-accent px-4 py-2 text-white text-xs font-bold rounded-full transition duration-200 ease-in-out hover:opacity-70
-  }  
-  .divider{
-    @apply mb-12 dark:border-gray-600
+  .following-btn {
+    @apply bg-accent px-4 py-2 text-white text-xs font-bold rounded-full transition duration-200 ease-in-out hover:opacity-70;
   }
-  .active-sidebar-link{
-    @apply text-black dark:text-white flex items-center font-semibold my-2 p-1 bg-gray-200 dark:bg-gray-800 rounded-lg
+  .divider {
+    @apply mb-12 dark:border-gray-600;
   }
-  .inactive-sidebar-link{
-    @apply text-black dark:text-white flex items-center font-semibold my-2 p-1 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg transition duration-200 ease-in-out
+  .active-sidebar-link {
+    @apply text-black dark:text-white flex items-center font-semibold my-2 p-1 bg-gray-200 dark:bg-gray-800 rounded-lg;
   }
-  .modal-container{
-    @apply z-50 transform duration-500 ease-in-out translate-x-0 h-screen w-full sm:w-1/2 dark:bg-darksidebar bg-white sm:rounded-l-xl shadow-xl p-8 sm:p-12
+  .inactive-sidebar-link {
+    @apply text-black dark:text-white flex items-center font-semibold my-2 p-1 hover:bg-gray-200 dark:hover:bg-gray-800 rounded-lg transition duration-200 ease-in-out;
+  }
+  .modal-container {
+    @apply z-50 transform duration-500 ease-in-out translate-x-0 h-screen w-full sm:w-1/2 dark:bg-darksidebar bg-white sm:rounded-l-xl shadow-xl p-8 sm:p-12;
   }
 }
